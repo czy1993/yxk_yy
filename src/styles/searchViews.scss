@@ -1,0 +1,20 @@
+
+@import './mixin.scss';
+.searchViews {
+  .main-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f7;
+    padding: 0;
+    .searchViews-center {
+      height: 100%;
+      background: #fff;
+      // border-top: 1px solid #eceef1;
+      box-sizing: border-box;
+      padding: 35px;
+      overflow: auto;
+      @include scroll-bar;
+    }
+  }
+}

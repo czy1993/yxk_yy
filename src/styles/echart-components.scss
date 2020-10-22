@@ -1,0 +1,71 @@
+.componentsView{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    .cmp-view-header{
+      height: 50px;
+      display: flex;
+      align-items: center;
+      .echart-name{
+        // width: 100px;
+        font-size: 18px;
+        color: #000;
+        font-weight: 700;
+      }
+      .echart-search{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .el-select{
+          width: 100px;
+        }
+        .dateTil{
+          margin: 0 10px 0  15px;
+        }
+        .el-date-picker{
+          // width: 200px;
+          .el-range-editor .el-range-input{
+            width: 100;
+          }
+        }
+      }
+    }
+    .cmp-view-center{
+      height: 380px;
+      width: 100%;
+      display: flex;
+      .dateBut-view{
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 100px;
+        span{
+          display: inline-block;
+          margin-bottom: 25px;
+          height: 35px;
+          line-height: 35px;
+          border-radius: 3px;
+          width: 100px;
+          text-align: center;
+          border: 1px solid #B7D1C9;
+          color: #00AE78;
+          cursor: pointer;
+          &:hover{
+            background: #00AE78;
+            color: #fff;
+            opacity: 0.9;
+          }
+        }
+      }
+      .search-view{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }

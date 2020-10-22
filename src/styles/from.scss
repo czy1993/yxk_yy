@@ -1,0 +1,206 @@
+//登录/注册/忘记密码
+.fromViews {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../static/img/from/bg_dl2.png") no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding-top: 175px;
+  color: #BDBDBD;
+  -moz-user-select:none; /*火狐*/
+    -webkit-user-select:none; /*webkit浏览器*/
+    -ms-user-select:none; /*IE10*/
+    -khtml-user-select:none; /*早期浏览器*/
+    user-select:none;
+  .center-form {
+    width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      height: 100px;
+      display: flex;
+      align-items: center;
+
+      .logo-logo {
+        height: 60px;
+        margin-right: 20px;
+      }
+
+      .logo-text {
+        height: 28px;
+      }
+    }
+
+    .from-content {
+      background-color: #fff;
+      position: relative;
+      padding: 50px 30px 40px 30px;
+      min-height: 330px;
+      box-sizing: border-box;
+      .toBakc{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        img{
+          height: 30px;
+        }
+      }
+    }
+
+    label {
+      font-weight: initial;
+    }
+
+    .text-right {
+      z-index: 2;
+      font-size: 14px;
+      margin-bottom: 50px;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      div{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .icon{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 14px;
+          width: 14px;
+          border: 1px solid #BDBDBD;
+          margin-right: 8px;
+        }
+      }
+      a {
+        color: #F26038;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(22, 200, 153);
+      }
+    }
+
+    .login-form-btn {
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .form-group {
+    position: relative;
+    font-size: 16px;
+    // color: rgb(165, 165, 165);
+    box-sizing: border-box;
+    padding-bottom: 25px;
+    .form-but{
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      display: inline-block;
+      height: 30px;
+      padding: 0 7px;
+      line-height: 30px;
+      color:#16C899 ;
+      z-index: 4;
+      cursor: pointer;
+      &:hover{
+        background-color: #16C899;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 3px;
+      }
+    }
+    .form-label {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 10px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .form-control {
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      height: 35px;
+      background: none;
+      border: none;
+      padding: 5px 0;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      border-bottom: 1px solid rgb(165, 165, 165);
+    }
+
+    .form-control:invalid {
+      outline: none;
+    }
+
+    .form-control:focus,
+    .form-control:valid {
+      outline: none;
+      // color: rgb(22, 200, 153);
+      // box-shadow: 0 1px rgb(22, 200, 153);
+      // border-color: rgb(22, 200, 153);
+    }
+
+    .form-control:focus+.form-label,
+    .form-control:valid+.form-label {
+      font-size: 14px;
+      -ms-transform: translateY(-25px);
+      -webkit-transform: translateY(-25px);
+      transform: translateY(-25px);
+    }
+  }
+
+  .login-form-btn {
+    //  width: 230px;
+    z-index: 2;
+    line-height: 40px;
+    font-size: 15px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+    height: 40px;
+    color: #fff;
+    background-color: #16C899;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+}
+#changePass {
+  .last-form-group{
+      margin-bottom: 40px;
+  }
+  .form-group {
+      font-size: 14px !important;
+      padding-bottom: 15px !important;
+  }
+  .form-control{
+      line-height: 30px !important;
+  }
+  .form-control:focus+.form-label,
+  .form-control:valid+.form-label {
+    font-size: 12px !important;
+    -ms-transform: translateY(-20px) !important;
+    -webkit-transform: translateY(-20px) !important;
+    transform: translateY(-20px) !important;
+  }
+}

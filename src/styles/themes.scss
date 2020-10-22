@@ -1,0 +1,38 @@
+$themes: (
+  green: (
+    //头部背景色
+      header-bg: #00af78,
+    //侧边栏激活颜色
+      nav-active: rgba(69, 217, 165, 1),
+    //金钱颜色
+      money-color: #e37325,
+    //侧边栏阴影颜色
+      sider-boxshadow: #d9e8e3,
+    //侧边栏hover颜色
+      sider-hover: rgba(69, 217, 165, 0.1),
+    //表格头部颜色
+      table-header: #d6f7e2,
+    //边框颜色(input,button)
+      border-color: #bfcec9,
+    //表格奇数行背景色
+      table-odd-row: #f5fbf9,
+    //表格偶数行背景色
+      table-even-row: #fcfefd,
+    //登录页tab选中颜色
+      login-tab-color: rgb(22, 200, 153),
+    //laout背景se
+      laout-bgcolor: #f1faf7,
+    //新增课程背景色
+      add-course-bgcolor: #fafffb,
+    //上传图片
+      upload-image: "../../../static/img/course/upload.png",
+    //上传图片 激活
+      upload-image-active: "../../../static/img/course/upload_active.png",
+    //绿色按钮颜色
+      green-button: #00ae78,
+    //详情颜色
+      detail-color: #ff0000,
+    //退款字色
+      refund-color: #0f80ff
+  )
+);

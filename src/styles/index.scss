@@ -1,0 +1,300 @@
+@import "./mixin.scss";
+$font-color: #45d9a6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+  }
+}
+.red{
+  color: red;
+}
+
+// 头部样式
+.view-top {
+  height: 55px;
+  // width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+
+  .view-name {
+    font-weight: 700;
+  }
+}
+
+.view-center {
+  // padding-top: 55px;
+  margin-top: 55px;
+  width: 100%;
+  // height: calc(100vh - 107px) ;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .right-bus {
+    position: absolute;
+    top: -55px;
+    right: 50px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F7F7;
+  }
+
+  .main-view {
+    flex: 1;
+    width: 100%;
+    // min-width: 1000px;
+    margin: 0 auto;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 40px 3% 0 3%;
+    @include scroll-bar;
+  }
+
+  .el-pagination {
+    height: 70px;
+    box-sizing: border-box;
+    padding: 15px 20px 8px 20px;
+    background-color: #fff;
+    border-top: 1px solid #ebeef5;
+  }
+
+  .view-name {
+    font-weight: 700;
+  }
+}
+
+// but样式
+.buts {
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 32px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 10px;
+  text-align: center;
+  border: 0;
+  outline: none;
+}
+
+.but_a {
+  background-color: $font-color;
+  color: #fff;
+
+  img {
+    opacity: 1 !important;
+  }
+}
+
+.but_b {
+  min-width: 50px;
+  background-color: $font-color;
+  color: #fff;
+}
+
+.but_c {
+  min-width: 50px;
+  border: 1px solid $font-color;
+  color: $font-color;
+}
+
+// 状态but
+.buts_0 {
+  color: #fff;
+  background-color: $font-color;
+}
+
+.buts_1 {
+  color: #fff;
+  background-color: #7db558;
+}
+
+.buts_2 {
+  color: #fff;
+  background-color: #ff9b56;
+}
+
+.buts_3 {
+  color: #fff;
+  background-color: #bfd2cb;
+}
+
+// 取消
+.buts_cancel {
+  background-color: #ff9b56;
+  color: #fff;
+  padding: 0 40px;
+}
+
+// 确定
+.buts_ok {
+  background-color: #00ae78;
+  color: #fff;
+  padding: 0 40px;
+}
+
+// 表格but
+.table_but {
+  display: inline-block;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.table_but_a {
+  color: #fff;
+  background-color: #45d9a6;
+}
+
+.table_but_b {
+  background-color: #ff9b56;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.left-buts {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  span {
+    height: 32px;
+    padding: 0 15px;
+    border: 1px solid #eeeeee;
+    line-height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #00ae78;
+      color: #00ae78;
+    }
+  }
+
+  .span_active {
+    border: 1px solid #00ae78;
+    color: #00ae78;
+  }
+}
+
+.el-table {
+  // border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  text-align: center;
+
+  .cell {
+    text-align: center;
+  }
+
+  .el-table__row:nth-child(2n + 1) {
+    background-color: #f9f9f9;
+  }
+
+  .isManager_active {
+    color: $font-color !important;
+  }
+
+  .looks {
+    color: $font-color !important;
+    cursor: pointer;
+  }
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #00ae78 !important;
+  border-color: #00ae78 !important;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: #00ae78 !important;
+  border-color: #00ae78 !important;
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+  color: #00ae78 !important;
+  
+}
+.el-table::before{
+  height: 0px !important;  // 表格底部border 伪类
+}
+.el-table__empty-block{
+  border-bottom: 1px solid #EBEEF5;
+}
+.el-table__body-wrapper{
+  @include scroll-bar;
+}
+.is-scrolling-middle{
+  @include scroll-bar;
+}
+.el-submenu__title *{
+  vertical-align: -2px
+}
+.el-menu-item *{
+  vertical-align: -2px
+}
+
+body .el-table th.gutter{
+  display: table-cell!important;
+}
+
+body .el-table colgroup.gutter{
+  display: table-cell!important;
+}
+.iconList {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      font-size: 32px;
+      width: 80px;
+      height: 80px;
+      transition: all .3s;
+      border-radius: 5px;
+      &:hover{
+        border: 1px solid!important;
+      }
+
+    }
+  }
+}
